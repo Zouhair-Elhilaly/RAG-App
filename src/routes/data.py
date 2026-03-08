@@ -8,6 +8,6 @@ data = APIRouter()
 @data.post("/upload/{prject_id}")
 async def upload_data(prject_id : str , file : UploadFile):
         
-            is_valid , msg = DataController.validate_file(file)
+            is_valid , msg = DataController().validate_upload_file(file)
             
-            return is_valid , msg
+            return {"is_valid": is_valid, "message": msg}
