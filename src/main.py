@@ -3,7 +3,7 @@ from fastapi import FastAPI
 
 from routes import base , data
 from motor.motor_asyncio import AsyncIOMotorClient
-from .helpers.config import get_settings
+from helpers.config import get_settings
 
 app = FastAPI()
 
